@@ -3,12 +3,13 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="CSS/style.css">
 
 	<title>Manage landing page</title>
@@ -17,9 +18,9 @@
 <body>
 	<main>
 		<header class="header">
-			<object data="images/logo.svg" type="image/svg+xml"></object>
+			<object class="logo" data="images/logo.svg" type="image/svg+xml"></object>
 
-			<nav>
+			<nav class="nav">
 				<ul class="ul">
 					<li>Pricing</li>
 					<li>Product</li>
@@ -28,6 +29,8 @@
 					<li>Community</li>
 				</ul>
 			</nav>
+
+			<object class="header__hamburguer" data="images/icon-hamburger.svg" type="image/svg+xml"></object>
 
 			<object class="bg_tablet" data="images/bg-tablet-pattern.svg" type="image/svg+xml"></object>
 
@@ -40,7 +43,7 @@
 			<div class="div">
 				<h1 class="div__h1">Bring everyone together to build better products.</h1>
 				<p class="div__p">Manage makes it simple for software teams to plan day-to-day
-					tasks while <br> keeping the larger team goals in view.</p>
+					tasks while keeping the larger team goals in view.</p>
 
 				<button class="header__btn">Get Started</button>
 			</div>
@@ -51,18 +54,18 @@
 		
 		<section class="section section--second">
 			<div class="section--second__div">
-				<h1 class="section__h1">What's different about <br> Manage?</h1>
-				<p class="section__p">Manage provides all the functionality your team needs, <br> without
-					the complexity. Our software is tailor-made for <br> modern digital
+				<h1 class="section__h1">What's different about Manage?</h1>
+				<p class="section__p">Manage provides all the functionality your team needs,  without
+					the complexity. Our software is tailor-made for  modern digital
 					product teams.</p>
 			</div>
 
 			<div class="section--second__div--list" >
 				<div class="section__div">
-					<p class="section__div__p">01</p>
+					<p ></p>
 
 					<div>
-						<h2 class="section__div__h2">Track company-wide progress</h2>
+						<h2 class="section__div__h2"><p class="section__div__p">01</p>Track company-wide progress</h2>
 						<p class="section__p">See how your day-to-day tasks fit into the wider vision. Go from
 							tracking progress at the milestone level all the way done to the
 							smallest of details. Never lose sight of the bigger picture again.</p>
@@ -70,10 +73,10 @@
 				</div>
 
 				<div class="section__div">
-					<p class="section__div__p">02</p>
+					
 
 					<div>
-						<h2 class="section__div__h2">Advanced built-in reports</h2>
+						<h2 class="section__div__h2"><p class="section__div__p">02</p>Advanced built-in reports</h2>
 						<p class="section__p">Set internal delivery estimates and track progress toward company
 							goals. Our customisable dashboard helps you build out the reports
 							you need to keep key stakeholders informed.</p>
@@ -81,10 +84,10 @@
 				</div>
 
 				<div class="section__div">
-					<p class="section__div__p">03</p>
+					
 
 					<div>
-						<h2 class="section__div__h2">Everything you need in one place</h2>
+						<h2 class="section__div__h2"><p class="section__div__p">03</p>Everything you need in one place</h2>
 						<p class="section__p">Stop jumping from one service to another to communicate, store files,
 							track tasks and share documents. Manage offers an all-in-one team
 							productivity solution.</p>
@@ -96,46 +99,51 @@
 		<section class="section section--third">
 			<h1 class="section--third__h1">What they've said</h1>
 
-			<div class="section--third__div">
-				<div class="section--third__div__div">
-					<div>
-						<figure class="third__div__div__figure">
-							<img class="avatar" src="images/avatar-anisha.png" alt="Anisha Li">
-						</figure>
-	
-						<h2 class="section--third__div__div__h2">Anisha Li</h2>
+			<div class="section--third__div swiper">
+				<div class="swiper-wrapper">
+					<div class="section--third__div__div swiper-slide">
+						<div>
+							<figure class="third__div__div__figure">
+								<img class="avatar" src="images/avatar-anisha.png" alt="Anisha Li">
+							</figure>
+		
+							<h2 class="section--third__div__div__h2">Anisha Li</h2>
+						</div>
+		
+						<p class="section--third__div__div__p">“Manage has supercharged our team's workflow. The ability to maintain
+							visibility on larger milestones at all times keeps everyone motivated.”</p>
 					</div>
-	
-					<p class="section--third__div__div__p">“Manage has supercharged our team's workflow. The ability to maintain
-						visibility on larger milestones at all times keeps everyone motivated.”</p>
-				</div>
-	
-				<div class="section--third__div__div">
-					<div>
-						<figure class="third__div__div__figure">
-							<img class="avatar" src="images/avatar-ali.png" alt="Ali Bravo">
-						</figure>
-	
-						<h2 class="section--third__div__div__h2">Ali Bravo</h2>
+		
+					
+					<div class="section--third__div__div swiper-slide">
+						<div>
+							<figure class="third__div__div__figure">
+								<img class="avatar" src="images/avatar-ali.png" alt="Ali Bravo">
+							</figure>
+		
+							<h2 class="section--third__div__div__h2">Ali Bravo</h2>
+						</div>
+		
+						<p class="section--third__div__div__p">“We have been able to cancel so many other subscriptions since using
+							Manage. There is no more cross-channel confusion and everyone is much
+							more focused.”</p>
 					</div>
-	
-					<p class="section--third__div__div__p">“We have been able to cancel so many other subscriptions since using
-						Manage. There is no more cross-channel confusion and everyone is much
-						more focused.”</p>
+		
+					<div class="section--third__div__div swiper-slide">
+						<div>
+							<figure class="third__div__div__figure">
+								<img class="avatar" src="images/avatar-richard.png" alt="Richard Watts">
+							</figure>
+		
+							<h2 class="section--third__div__div__h2">Richard Watts</h2>
+						</div>
+		
+						<p class="section--third__div__div__p">“Manage allows us to provide structure and process. It keeps us organized
+							and focused. I can't stop recommending them to everyone I talk to!”</p>
+					</div> 
 				</div>
-	
-				<div class="section--third__div__div">
-					<div>
-						<figure class="third__div__div__figure">
-							<img class="avatar" src="images/avatar-richard.png" alt="Richard Watts">
-						</figure>
-	
-						<h2 class="section--third__div__div__h2">Richard Watts</h2>
-					</div>
-	
-					<p class="section--third__div__div__p">“Manage allows us to provide structure and process. It keeps us organized
-						and focused. I can't stop recommending them to everyone I talk to!”</p>
-				</div>
+
+				<div class="swiper-pagination"></div>
 			</div>
 
 			<button class="header__btn">Get Started</button>
@@ -143,15 +151,15 @@
 
 		
 		<section class="section section--fourth">
-			<h1 class="section--fourth__h1">Simplify how your team <br> works today.</h1>
+			<h1 class="section--fourth__h1">Simplify how your team  works today.</h1>
 	
 			<button class="header__btn section--fourth__btn">Get Started</button>
 		</section>
 
 		
 		<footer class="footer">
-			<div class="footer__div">
-				<object data="images/logo_white.svg" type="image/svg+xml"></object>
+			<div class="footer__div footer__div--social_media">
+				<object class="footer__logo" data="images/logo_white.svg" type="image/svg+xml"></object>
 
 				<div class="social_media">
 					<object data="images/icon-facebook.svg" type="image/svg+xml"></object>
@@ -180,8 +188,8 @@
 				</nav>
 			</div>
 
-			<div class="footer__div">
-				<div>
+			<div class="footer__div footer__div--input">
+				<div class="div--input">
 					<input class="footer__input" placeholder="Updates in your inbox…">
 					<button class="footer__btn">Go</button>
 				</div>
@@ -190,6 +198,9 @@
 			</div>
 		</footer> 
 	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="JS/script.js"></script>
 </body>
 
 </html>
