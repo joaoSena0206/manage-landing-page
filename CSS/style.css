@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: "Be Vietnam Pro", sans-serif;
+    box-sizing: border-box;
 }
 
 html
@@ -12,8 +13,26 @@ html
 
 main
 {
-    padding: 5rem 10rem;
+    padding: 3rem 5rem;
     padding-bottom: 0;
+}
+
+.cover
+{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    opacity: 0.5;
+    display: none;
+}
+
+.menu--mobile
+{
+    z-index: 200;
+    background-color: white;
+
 }
 
 button:hover
@@ -26,9 +45,31 @@ button:hover
 .header
 {
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
     color: hsl(228, 39%, 23%);
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    background-color: white;
+    z-index: 100;
+}
+
+.div--hamburguer
+{
+    display: none;
+}
+
+.logo
+{
+    width: 150px;
+}
+
+.header__hamburguer
+{
+    pointer-events: none;
 }
 
 .ul
@@ -53,14 +94,6 @@ button:hover
     -webkit-box-shadow: 0px 10px 25px -5px rgba(255,47,0,1);
     -moz-box-shadow: 0px 10px 25px -5px rgba(255,47,0,1);
     box-shadow: 0px 10px 25px -5px rgba(255,47,0,1);
-}
-
-.bg_tablet
-{
-    z-index: -2;
-    position: absolute;
-    right: -10rem;
-    top: -10rem;
 }
 
 /* SECTION 1 */
@@ -167,9 +200,7 @@ button:hover
 .section--third__div__div
 {
     background-color: hsl(0, 0%, 97%);
-    padding: 0 2rem 2rem 2rem;
     margin-right: 2rem;
-    flex-basis: 28.9%;
 }
 
 .section--third__div__div:last-of-type
@@ -193,6 +224,55 @@ button:hover
     margin-bottom: 0.5rem;
 }
 
+.section--third
+{
+    margin: 8rem -1.5rem;
+}
+
+.section--third__div__div__h2
+{
+    font-size: 1.2em;
+}
+
+.third__div__div__figure
+{
+    margin-top: 0;
+}
+
+.section--third__div__div__p
+{
+    font-size: 1em;
+}
+
+.section--third__div__div
+{
+    padding: 2rem;
+    box-sizing: border-box;
+    width: 90%;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.swiper
+{
+    margin: 4rem auto;
+}
+
+.swiper-wrapper
+{
+    overflow-y: hidden !important;
+}
+
+.swiper-button-prev, .swiper-button-next
+{
+    color: hsl(12, 88%, 59%);
+}
+
+.swiper-pagination-bullet-active
+{
+    background-color: hsl(12, 88%, 59%);
+}
+
 /* SECTION 4 */
 
 .section--fourth
@@ -203,6 +283,7 @@ button:hover
     margin: 0 -10rem;
     padding: 5rem 10rem;
     align-items: center;
+    gap: 3rem;
 }
 
 .section--fourth__h1
@@ -299,7 +380,71 @@ svg
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 576px)
+@media screen and (min-width: 1024px)
+{
+    .div__h1
+    {
+        font-size: 3em;
+    }
+
+    .section__object
+    {
+        margin-top: -05%;
+        width: 100%;
+    }
+
+    .section__h1
+    {
+        font-size: 2em;
+    }
+
+    .section__div__h2
+    {
+        display: flex;
+    }
+
+    .section--third__div__div
+    {
+        padding: 2rem
+    }
+
+    .section__div__p
+    {
+        padding: 0.2rem 1rem;
+    }
+
+    .section--second__div
+    {
+        width: 50%;
+    }
+
+    .section--second__div--list
+    {
+        width: 40%;
+    }
+
+    .section--third__h1
+    {
+        font-size: 2em;
+    }
+
+    @media screen and (min-width: 1500px)
+    {
+        .section--first
+        {
+            margin-top: 15rem;
+        }
+
+        .section__object
+        {
+            width: clamp(50%, 70%, 100%);
+            max-width: 700px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px)
 {
     ::-webkit-scrollbar 
     {
@@ -319,14 +464,38 @@ svg
 
     /* HEADER */
 
-    .logo
+    .div--hamburguer
     {
-        width: 124px;
+        display: block;
     }
 
     .nav
     {
         display: none;
+        z-index: 200;
+        background-color: white;
+        padding: 2rem;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    .ul
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu--mobile .ul
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo
+    {
+        width: 124px;
     }
 
     header .header__btn
@@ -334,10 +503,10 @@ svg
         display: none;
     }
 
-    .bg_tablet
+    .header__hamburguer
     {
-        top: -19rem;
-        right: -22rem;
+        display: block;
+        height: 16px;
     }
 
     /* SECTION 1 */
@@ -355,20 +524,26 @@ svg
 
     .div__h1
     {
-        font-size: 3.7em;
+        font-size: 2em;
     }
 
     .div__p
     {
-        font-size: 1.7em;
+        margin: 1.5rem 0;
+        font-size: 1em;
     }
 
     .header__btn
     {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     /* SECTION 2 */
+
+    .section__h1
+    {
+        font-size: 1.8em;
+    }
 
     .section--second
     {
@@ -378,7 +553,8 @@ svg
 
     .section__p
     {
-        font-size: 1.4em;
+        margin-top: 1.5rem;
+        font-size: 1em;
         width: 100%;
     }
 
@@ -392,12 +568,24 @@ svg
     {
         display: flex;
         align-items: center;
+        font-size: 1em
+    }
+
+    .section__div__p
+    {
+        padding: 0.5rem 1rem;
     }
 
     /* SECTION 3 */
+
+    .swiper-button-prev, .swiper-button-next
+    {
+        display: none;
+    }
+
     .section--third__h1
     {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .section--third
@@ -417,19 +605,21 @@ svg
 
     .section--third__div__div__p
     {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     .section--third__div__div
     {
-        padding: 2rem 3rem 3rem 3rem;
-        flex-basis: 83vw;
+        padding: 2rem;
+        box-sizing: border-box;
+        width: 90%;
         flex-shrink: 0;
+        margin: auto;
     }
 
     .swiper
     {
-        height: 300px;
+        margin: 4rem auto;
     }
 
     .swiper-wrapper
@@ -443,6 +633,11 @@ svg
     }
 
     /* SECTION 4 */
+
+    .section--fourth__h1
+    {
+        font-size: 2em;
+    }
 
     .section--fourth
     {
@@ -458,11 +653,13 @@ svg
         flex-direction: column-reverse;
         align-items: center;
         gap: 4rem;
+        padding: 2rem 10rem;
     }
 
     .footer__p
     {
-        display: none;
+        margin-top: 2rem;
+        font-size: 0.8em;
     }
 
     .footer__div
@@ -481,11 +678,18 @@ svg
     {
         width: 100%;
         text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
     .div--input input
     {
-        width: 66%;
+        width: 50%;
+    }
+
+    .div--input input::placeholder
+    {
+        font-size: 0.8em;
     }
 
     .footer__btn
@@ -493,9 +697,22 @@ svg
         margin-right: 0;
     }
 
+    .nav_wrapper
+    {
+        width: 100%;
+    }
+
+    .ul__li
+    {
+        font-size: 0.9em;
+    }
+
     .footer__ul
     {
+        width: 100%;
         font-size: 1.2em;
+        justify-content: space-around;
+        gap: 0;
     }
 
     .social_media
@@ -512,15 +729,38 @@ svg
 
     .social_media object
     {
-        width: 60px;
+        width: 40px;
     }
 
     .footer__logo
     {
         margin-top: 2rem;
-        width: 200px;
+        width: 150px;
     }
 
+    @media screen and (min-width: 481px)
+    {
+        .logo
+        {
+            width: 150px;
+        }
+
+        .header__hamburguer
+        {
+            height: 20px;
+        }
+    }
+
+    @media screen and (min-width: 769px)
+    {
+        .logo
+        {
+            width: 180px;
+        }
+
+        .header__hamburguer
+        {
+            height: 25px;
+        }
+    }
 }
-
-
